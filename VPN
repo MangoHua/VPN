@@ -18,7 +18,7 @@ sudo add-apt-repository \
 	 mkdir -p ~/wireguard/
    mkdir -p ~/wireguard/config/
    nano ~/wireguard/docker-compose.yml
-	 Next, the content we could put into docker-compose.yml
+	 Next, the content we could put into docker-compose.yml                               
 version: '3.8'
 services:
   wireguard:
@@ -28,7 +28,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Chicago
-      - SERVERURL=172.16.145.62
+      - SERVERURL=143.110.152.242
       - SERVERPORT=51820
       - PEERS=pc1,pc2,phone1
       - PEERDNS=auto
@@ -53,4 +53,21 @@ Serverurl: put server IP address
 Now we can start Wireguard
     cd ~/wireguard/
     docker-compose up -d
-		
+When it say wireguard is up-to-date, so we could do the next
+Then use this command to form the QR code
+  docker-compose logs -f wireguard
+ On your phone, after download Wireguard, scan the QR code
+ Go to ipleak.net to Check it is connect successful or not.
+Next step
+	Connect on the Laptop
+Use command ls, to list the file
+Use command cd, to get into the file called wireguard
+Agian ls to list the file in wireguard
+cd to get in to the file called config
+ls
+nano peer_pc1
+you can see the content in the peer_pc1, and copy content inside the peer_pc1 and paste to the Notepad and save it in .conf
+Then 
+open the file in the Wireguard
+Turn it on
+Go to ipleak.net to check connect
