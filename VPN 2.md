@@ -62,7 +62,9 @@ Next, the content we could put into docker-compose.yml
              sysctls:
                - net.ipv4.conf.all.src_valid_mark=1
 TZ: you change to the TZ database time zones
+
 Serverurl: put server IP address
+
 Now we can start Wireguard
          
 	 cd ~/wireguard/
@@ -73,11 +75,17 @@ Then use this command to form the QR code
         
 	docker-compose logs -f wireguard
 On your phone, after download Wireguard, scan the QR code
+
 Go to ipleak.net to Check it is connect successful or not.
+
 Next step: Connect on the Laptop
+
 Use command ls, to list the file
+
 Use command cd, to get into the file called wireguard
+
 Agian ls to list the file in wireguard
+
 cd to get in to the file called config
          
 	 ls
@@ -92,8 +100,13 @@ cd to get in to the file called config
          
 	 nano peer_pc1
 you can see the content in the peer_pc1, and copy content inside the peer_pc1 and paste to the Notepad and save it in .conf
+
 Then 
+
 open the file in the Wireguard
+
 Turn it on
+
 Go to ipleak.net to check connect
+
 So you are done!
