@@ -1,4 +1,5 @@
 # VPN
+# Install Docker
 Frist install Docker on Ubuntu20.04:
          
 	 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
@@ -23,6 +24,7 @@ Then
 	 sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 	 
 	 sudo chmod +x /usr/local/bin/docker-compose
+# Wireguard	 
 Then we set up Wireguard
 	
 	mkdir -p ~/wireguard/
